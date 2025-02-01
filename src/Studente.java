@@ -31,21 +31,18 @@ public class Studente {
     }
 
     //metodo per cambiare nome//
-    public String setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return name;
     }
 
     //metodo per cambiare cognnome//
-    public String setSurname(String surname) {
+    public void setSurname(String surname) {
         this.surname = surname;
-        return surname;
     }
 
     //metodo per cambiare nome//
-    public int setName(int age) {
+    public void setName(int age) {
         this.age = age;
-        return age;
     }
 
 
