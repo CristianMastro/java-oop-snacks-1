@@ -29,5 +29,27 @@ public class App {
         //stampiamo nuovo saldo//
         System.out.println("Il tuo nuovo saldo è: " + contoCristian.getSaldo() + "euro");
 
+        Studente studente2 = new Studente("Giulio", "Mastrotoaro", 25);
+
+        System.out.println("Nome: " + studente2.getName());
+        System.out.println("Cognome: " + studente2.getSurname());
+        System.out.println("Età: " + studente2.getAge());
+        System.out.println(studente2.getStudente());
+
+        Studente studente3 = new Studente("Alessandro", "Mastrotoaro", 22);
+
+        System.out.println("Nome: " + studente3.getName());
+        System.out.println("Cognome: " + studente3.getSurname());
+        System.out.println("Età: " + studente3.getAge());
+        System.out.println(studente3.getStudente());
+
+        RegistroStudenti registro = new RegistroStudenti();
+
+        registro.addStudent(studente1);
+        registro.addStudent(studente2);
+        registro.addStudent(studente3);
+
+        // Stampa della lista degli studenti//
+        registro.stampaStudenti();
     }
 }
