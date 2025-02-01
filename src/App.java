@@ -8,5 +8,26 @@ public class App {
         System.out.println("Età: " + studente1.getAge());
         System.out.println(studente1.getStudente());
 
+
+        ContoBancario contoCristian = new ContoBancario("ITSONOPOVERO");
+
+        //visualizza numero conto//
+        System.out.println(contoCristian.getNumeroConto());
+
+        //essendo una variabile primitiva il saldo sarà 0//
+        System.out.println("Il tuo saldo è: " + contoCristian.getSaldo() + "euro");
+
+        //aggiungiamo denaro//
+        contoCristian.addDenaro(100);
+
+        //visualizzaiamo nuovo saldo//
+        System.out.println("Il tuo nuovo saldo è: " + contoCristian.getSaldo() + "euro");
+
+        //preleviamo//
+        contoCristian.removeDenaro(25);
+
+        //stampiamo nuovo saldo//
+        System.out.println("Il tuo nuovo saldo è: " + contoCristian.getSaldo() + "euro");
+
     }
 }
