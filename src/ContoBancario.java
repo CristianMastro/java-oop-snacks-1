@@ -1,4 +1,6 @@
 public class ContoBancario {
+
+    //caratteristiche-attributi oggetto//
     private String numeroConto;
     private double saldo;
 

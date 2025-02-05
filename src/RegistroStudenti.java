@@ -1,25 +1,34 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class RegistroStudenti {
     
     // Lista privata per memorizzare gli studenti//
-    private List<Studente> studenti; 
+    private Studente[] registroStudenti;
+    private int presenze = 0; 
 
-    // Costruttore senza parametri//
-    public RegistroStudenti() {
-        this.studenti = new ArrayList<>();
+    //costrutto con numero massimo di studenti//
+    public RegistroStudenti(int maxStudenti) {
+        registroStudenti = new Studente[maxStudenti]; 
     }
 
-    // Metodo per aggiungere uno studente al registro//
-    public void addStudent(Studente studente) {
-        studenti.add(studente);
+    //metodo per aggiungere studente//
+    public void aggiungiStudente(Studente studente) {
+        if (presenze < registroStudenti.length) {
+            registroStudenti[presenze] = studente;
+            presenze++;
+            System.out.println("Studente aggiunto con successo.");
+        } else {
+            System.out.println("Registro pieno, impossibile aggiungere altri studenti.");
+        }
     }
 
-    // Metodo per stampare tutti gli studenti nel registro//
-    public void stampaStudenti() {
-        for (int i = 0; i < studenti.size(); i++) {
-            System.out.println("Studente: " + studenti.get(i).getStudente());
+    //metodo per stampare studenti presenti//
+    public void stampaRegistro() {
+        if (presenze == 0) {
+            System.out.println("Il registro è vuoto");
+        }else {
+            for (int i = 0; i < presenze; i++) {
+            System.out.println(registroStudenti[i].getName()); 
+            }
         }
     }
 }

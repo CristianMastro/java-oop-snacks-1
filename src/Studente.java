@@ -1,9 +1,11 @@
 public class Studente {
     
+    //caratteristiche-attributi oggetto//
     private String name;
     private String surname;
     private int age;
 
+    //costruttore//
     public Studente(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;

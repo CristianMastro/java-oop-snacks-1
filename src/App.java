@@ -43,13 +43,15 @@ public class App {
         System.out.println("Età: " + studente3.getAge());
         System.out.println(studente3.getStudente());
 
-        RegistroStudenti registro = new RegistroStudenti();
+        Studente studente4 = new Studente("Gino", "Mastrotoaro", 12);
 
-        registro.addStudent(studente1);
-        registro.addStudent(studente2);
-        registro.addStudent(studente3);
+        RegistroStudenti registroStudenti = new RegistroStudenti(3);
+        
+        registroStudenti.aggiungiStudente(studente1);
+        registroStudenti.aggiungiStudente(studente2);
+        registroStudenti.aggiungiStudente(studente3);
+        registroStudenti.aggiungiStudente(studente4);
 
-        // Stampa della lista degli studenti//
-        registro.stampaStudenti();
+        registroStudenti.stampaRegistro();
     }
 }
